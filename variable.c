@@ -1920,7 +1920,7 @@ rb_const_set(VALUE klass, ID id, VALUE val)
     st_insert(RCLASS_CONST_TBL(klass), (st_data_t)id, (st_data_t)ce);
 
     if (GET_VM()->running) {
-      rb_funcall(klass, rb_intern("const_added"), 1, ID2SYM(id));
+        rb_funcall(klass, rb_intern("const_added"), 1, ID2SYM(id));
     }
 }
 
